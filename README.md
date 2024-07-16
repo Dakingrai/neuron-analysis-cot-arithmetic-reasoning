@@ -1,6 +1,6 @@
 # neuron-analysis-cot-arithmetic-reasoning
 
-This repository contains the code for ACL 2024 paper: [An Investigation of Neuron Activation as a Unified Lens to Explain Chain-of-Thought Eliciting Arithmetic Reasoning of LLMs](https://github.com/Dakingrai/neuron-activation-analysis/tree/main).
+This repository contains the code for ACL 2024 paper: [An Investigation of Neuron Activation as a Unified Lens to Explain Chain-of-Thought Eliciting Arithmetic Reasoning of LLMs](https://arxiv.org/abs/2406.12288).
 
 **How to Cite:** If you find our survey useful for your research, please cite our paper:
 ```
