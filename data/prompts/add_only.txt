@@ -1,0 +1,68 @@
+Question: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
+Let’s think step by step
+First there are 3 cars.
+Then 2 more cars arrive.
+So there must be 3 + 2 = 5 cars.
+The answer is 5.
+
+Question: Paddington has 40 more goats than Washington. If Washington has 140 goats, how many goats do they have in total?
+Let’s think step by step
+First Paddington has 40 more goats than Washington.
+We know Washington has 140 goats.
+So Paddington has 40 + 140 = 180 goats.
+So they have 180 + 140 = 320 goats in total.
+The answer is 320.
+
+Question: Christina has 3 snakes. 1 snake is 2 feet long. Another snake is 16 inches long. The last snake is 10 inches long. How many inches are all of her snakes combined?
+Let’s think step by step
+First Christina has 3 snakes.
+Then 1 snake is 2 feet long.
+We know 1 foot is 12 inches.
+So 2 feet is 12 + 12 = 24 inches.
+Then another snake is 16 inches long.
+Then the last snake is 10 inches long.
+So all of her snakes combined are 24 + 16 + 10 = 50 inches.
+The answer is 50.
+
+Question: Bush and Matt are brothers. Bush is younger than Matt by 3 years. This year Bush will be 12 years old. What will be Matt’s age 10
+years from now?
+Let’s think step by step
+First Bush is younger than Matt by 3 years.
+We know Bush will be 12 years old this year.
+So Matt will be 12 + 3 = 15 years old this year.
+Then Matt’s age 10 years from now will be 15 + 10 = 25 years old.
+The answer is 25.
+
+Question: Jeremy listened to five more songs yesterday than today. Yesterday, he listened to nine songs. How many songs did Jeremy listen to in two days?
+Let’s think step by step
+First Jeremy listened to 9 songs yesterday.
+Then he listened to 5 more songs yesterday than today.
+So he listened to 9 + 5 = 14 songs today.
+So he listened to 9 + 14 = 23 songs in two days.
+The answer is 23.
+
+Question: Jar A has 28 marbles. Jar B has 12 more marbles than jar A. Jar C has as many marbles as jar B. How many marbles are there
+altogether?
+Let’s think step by step
+First Jar A has 28 marbles.
+Then Jar B has 12 more marbles than jar A.
+So Jar B has 28 + 12 = 40 marbles.
+Then Jar C has as many marbles as jar B.
+So Jar C has 40 marbles.
+So there are 28 + 40 + 40 = 108 marbles altogether.
+The answer is 108.
+
+Question: Marion received 20 more turtles than Mia at the animal rescue center. If Mia received 40 turtles, how many turtles did they receive together?
+Let’s think step by step
+First Marion recieved 20 more turtles than Mia.
+We know Mia received 40 turtles.
+So Marion received 20 + 40 = 60 turtles.
+So together they received 60 + 40 = 100 turtles.
+The answer is 100.
+
+Question: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does he have now?
+Let’s think step by step
+First Shawn has 5 toys.
+Then he got 2 toys each from his mom and dad.
+So he must have 5 + 4 = 9 toys.
+The answer is 9.
