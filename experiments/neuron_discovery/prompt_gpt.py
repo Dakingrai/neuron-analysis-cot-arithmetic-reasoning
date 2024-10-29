@@ -91,8 +91,7 @@ def main():
   openai.api_type = "azure"
   openai.api_base = "https://openai-access-west-us-azure.openai.azure.com/"
   openai.api_version = "2023-07-01-preview"
-  # openai.api_key = os.getenv("OPENAI_API_KEY")
-  openai.api_key = 'fef7c69911d044a7829444d72bea0f40'
+  openai.api_key = os.getenv("OPENAI_API_KEY")
   
   filtered_neurons = filter_neurons(data, concept_token)
   prev_results = previous_results()
