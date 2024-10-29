@@ -11,6 +11,7 @@ from scripts import utils
 from typing import List
 import fire
 from scripts.Llama import Llama
+from data import prompts
 
 
 def save_data(data, file_path):
@@ -220,7 +221,7 @@ def main(
     ckpt_dir: str,
     tokenizer_path: str,
     prompt: str,
-    few_shot: False,
+    few_shot: bool = True,
     max_seq_len: int = 4500,
     max_gen_len: int = 500,
     max_batch_size: int = 6,
@@ -231,15 +232,10 @@ def main(
 
     batch_size = max_batch_size
 
-    results_dir = results_dir + "{model}"
+    # load data
     data = read_data(data_path)
-    
-    # Create root folder to save the results
-    if not os.path.exists(results_dir):
-        print("Creating directory: ", results_dir)
-        os.makedirs(results_dir)
-    
-    # Read prompts from .txt file for few-shot prompts
+
+    # load prompt
     if few_shot:
         if '.txt' not in prompt:
             raise SystemExit("Provide path to your prompt file (.txt) containing few-shot demostration!")
@@ -251,18 +247,26 @@ def main(
         prompt_type = prompt.split()[0] + "_" + prompt.split()[-1] # Use the first and last word of the single-shot for prompt_type, which is used to create directories for saving the results!
         clean_prompt = prompt
 
-    generator = MyLlama(ckpt_dir, tokenizer_path, max_seq_len, max_gen_len, max_batch_size, model_parallel_size)
-
-    # Create a new folder for the prompt_type 
+    # Create new folders to save results for the prompt_type 
+    # root folder
+    if not os.path.exists(results_dir):
+        print("Creating directory: ", results_dir)
+        os.makedirs(results_dir)
+    # folder for each prompt_type
     if not os.path.exists(f"{results_dir}/{prompt_type}"):
         print("Creating directory: ", f"{results_dir}/{prompt_type}")
         os.makedirs(f"{results_dir}/{prompt_type}")
 
+    # Initializaing files to save results
     inference_save_path = f"{results_dir}/{prompt_type}/results.jsonl"
     extract_pred_path = f"{results_dir}/{prompt_type}/clean_results.jsonl"
     final_save_path = f"{results_dir}/{prompt_type}/final.json"
     print("Saving to: ", inference_save_path)
+
+    # Load and run the model
+    generator = MyLlama(ckpt_dir, tokenizer_path, max_seq_len, max_gen_len, max_batch_size, model_parallel_size)
     run_inference(generator, data, batch_size=batch_size, prompt = clean_prompt, type=prompt_type, few_shot=few_shot, save_path=inference_save_path, max_gen_len=max_gen_len)
+
     if few_shot:
         compute_cot_with_example_accuracy(gold_data_path=data_path, pred_data_path=inference_save_path, save_path=final_save_path)
     else:
@@ -272,6 +276,7 @@ def main(
 
 if __name__ == "__main__":
     fire.Fire(main)
+    # torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir ../../../downloads/huggingface/models/llama2-7b/ --tokenizer_path ../../../downloads/huggingface/models/llama2-7b/tokenizer.model --prompt "Let's think step by step" --few_shot False
 
         
     

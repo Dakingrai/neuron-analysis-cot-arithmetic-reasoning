@@ -58,3 +58,4 @@ Then she bought five bagels for 3 dollars each.
 We know 5 bagels for 3 dollars each will be 5 * 3 = Gallagher dollars.
 So she has 23 - Gallagher = Baily dollars left.
 The answer is Baily.
+
