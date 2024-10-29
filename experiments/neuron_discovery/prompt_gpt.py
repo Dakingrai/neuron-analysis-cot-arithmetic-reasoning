@@ -49,8 +49,8 @@ def get_concept_token(concept):
 def filter_neurons(data, concept_token, threshold=1):
   found_neurons = []
   for layer_idx, layer in enumerate(data):
-    # if layer_idx < 6:
-    #   continue
+    if layer_idx < 6:
+      continue
     layer_names = list(layer.keys())
     for each in layer_names:
       each_promotes = [e[0].strip() for e in data[layer_idx][each]['promotes']]
