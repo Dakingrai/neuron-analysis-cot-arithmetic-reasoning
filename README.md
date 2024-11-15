@@ -11,3 +11,20 @@ This repository contains the code for ACL 2024 paper: [An Investigation of Neuro
   year={2024}
 }
 ```
+
+## Environment Setup
+This project is tested in Python 3.8.5.
+
+To get started, set up the environment:
+```
+python -m venv env 
+source env/bin/activate
+pip install -r requirements.txt
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+```
+
+Now, clone the repository. 
+```
+[git clone https://github.com/Dakingrai/ood-generalization-semantic-boundary-techniques.git
+cd ood-generalization-semantic-boundary-techniques](https://github.com/Dakingrai/neuron-analysis-cot-arithmetic-reasoning)
+```
