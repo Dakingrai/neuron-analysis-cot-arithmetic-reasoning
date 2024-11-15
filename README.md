@@ -25,6 +25,11 @@ pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --e
 
 Now, clone the repository. 
 ```
-[git clone https://github.com/Dakingrai/ood-generalization-semantic-boundary-techniques.git
+git clone https://github.com/Dakingrai/ood-generalization-semantic-boundary-techniques.git
 cd ood-generalization-semantic-boundary-techniques](https://github.com/Dakingrai/neuron-analysis-cot-arithmetic-reasoning)
+```
+
+## Running Llama2 on GSM8K test set
+```
+torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir <path_to_model> --tokenizer_path <path_to_model>/tokenizer.model --prompt equation_only --few_shot True
 ```
