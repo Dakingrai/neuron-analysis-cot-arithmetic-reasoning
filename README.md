@@ -33,3 +33,4 @@ cd ood-generalization-semantic-boundary-techniques](https://github.com/Dakingrai
 ```
 torchrun --nproc_per_node 1 gsm8k_inference.py --ckpt_dir <path_to_model> --tokenizer_path <path_to_model>/tokenizer.model --prompt equation_only --few_shot True
 ```
+Note: The --prompt argument should specify the filename of the prompt located in the data/prompts directory. For instance, to run inference using a prompt that contains only equations without any text, the argument should be set to "equation_only".
