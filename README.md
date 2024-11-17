@@ -37,6 +37,8 @@ Note*: The `--prompt` argument should specify the filename of the prompt located
 
 
 ## Neuron Discovery
+This is the implementation of the Automatic Neuron Discovery approach proposed in the paper. 
+![algorithms](https://github.com/user-attachments/assets/f6560d02-f0fc-465e-913c-1544e87e1302)
 
 ### Running Algorithm One.
 ```
