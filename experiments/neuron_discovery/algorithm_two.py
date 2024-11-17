@@ -130,3 +130,8 @@ def main(
     TOP_K = 20
     max_gen_len = 150
     save_activations(generator, all_samples, prompt = clean_prompt, prompt_type=prompt_type, TOP_K=TOP_K, max_gen_len=max_gen_len, save_path=f"{results_dir}")
+
+
+if __name__ == "__main__":
+    fire.Fire(main)
+    # torchrun --nproc_per_node 1 main.py --ckpt_dir ../../../downloads/huggingface/models/llama2-7b/ --tokenizer_path ../../../downloads/huggingface/models/llama2-7b/tokenizer.model --experiment algorithm_two --prompt data/prompts/equation_only.txt --data_dir results/gsm8k_inference/equation_only/final.json

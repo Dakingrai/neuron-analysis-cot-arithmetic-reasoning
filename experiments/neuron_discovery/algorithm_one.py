@@ -77,6 +77,7 @@ def main(
     print("**************************")
     
     # load the data
+    pdb.set_trace()
     data = utils.load_data(data_dir)
     n_samples = 20
     seed = 42
@@ -114,5 +115,6 @@ def main(
 
 if __name__ == "__main__":
     fire.Fire(main) 
+    # torchrun --nproc_per_node 1 main.py --ckpt_dir ../../../downloads/huggingface/models/llama2-7b/ --tokenizer_path ../../../downloads/huggingface/models/llama2-7b/tokenizer.model --experiment algorithm_one --prompt data/prompts/equation_only.txt --data_dir results/gsm8k_inference/text_only/final.json
     
     

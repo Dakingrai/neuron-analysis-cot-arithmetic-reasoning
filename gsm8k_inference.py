@@ -184,7 +184,6 @@ def clean_cot_pred_answers(data, save_path=None):
         clean_data.append(each_dict)
     if save_path:
         utils.save_data(clean_data, save_path)
-
     return clean_data
     
 def run_inference(generator, data, prompt, type="cot", batch_size=6, max_gen_len=300, save_path=None, few_shot=False):
