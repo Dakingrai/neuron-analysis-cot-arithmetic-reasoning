@@ -48,22 +48,12 @@ class CorruptSingle:
             neuron = self.neuron
             prng = numpy.random.RandomState(1)
             num_tokens = output.shape[1]
-            # module.weight.data[:, neuron] = module.weight.data[:, neuron] + torch.from_numpy(prng.normal(-1, 1, module.weight.data[:, neuron].shape[0])).to(module.weight.data.device)
-            module.weight.data[:, neuron] = module.weight.data[:, neuron] 
-            
-            output1 = torch.matmul(input[0], module.weight.T)
-            try:
-                assert torch.allclose(output, output1)
-            except:
-                print("Error")
-                print("-------------------")
+            module.weight.data[:, neuron] = module.weight.data[:, neuron] + torch.from_numpy(prng.normal(-1, 1, module.weight.data[:, neuron].shape[0])).to(module.weight.data.device)       
+            output = torch.matmul(input[0], module.weight.T)
             if stop:
                 raise StopForward()
-            output = output1
             return output
         self.hook1 = self.model.layers[self.layer].feed_forward.w2.register_forward_hook(hook)
-        # self.coeff_value = coeff_value
-        # self.hook2 = self.model.layers[self.layer].feed_forward.w1.register_forward_hook(hook)
         if self.verbose:
             print("Intervening on layer: " + str(self.layer) + " neuron: " + str(self.neuron) + " with coefficient: " + str(self.coeff_value))
 

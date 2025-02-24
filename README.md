@@ -4,11 +4,22 @@ This repository contains the code for ACL 2024 paper: [An Investigation of Neuro
 
 **How to Cite:** If you find our survey useful for your research, please cite our paper:
 ```
-@article{rai2024investigation,
-  title={An Investigation of Neuron Activation as a Unified Lens to Explain Chain-of-Thought Eliciting Arithmetic Reasoning of LLMs},
-  author={Rai, Daking and Yao, Ziyu},
-  journal={arXiv preprint arXiv:2406.12288},
-  year={2024}
+@inproceedings{rai-yao-2024-investigation,
+    title = "An Investigation of Neuron Activation as a Unified Lens to Explain Chain-of-Thought Eliciting Arithmetic Reasoning of {LLM}s",
+    author = "Rai, Daking  and
+      Yao, Ziyu",
+    editor = "Ku, Lun-Wei  and
+      Martins, Andre  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    address = "Bangkok, Thailand",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.387/",
+    doi = "10.18653/v1/2024.acl-long.387",
+    pages = "7174--7193",
+    abstract = "Large language models (LLMs) have shown strong arithmetic reasoning capabilities when prompted with Chain-of-Thought (CoT) prompts. However, we have only a limited understanding of how they are processed by LLMs. To demystify it, prior work has primarily focused on ablating different components in the CoT prompt and empirically observing their resulting LLM performance change. Yet, the reason why these components are important to LLM reasoning is not explored. To fill this gap, in this work, we investigate {\textquotedblleft}neuron activation{\textquotedblright} as a lens to provide a unified explanation to observations made by prior work. Specifically, we look into neurons within the feed-forward layers of LLMs that may have activated their arithmetic reasoning capabilities, using Llama2 as an example. To facilitate this investigation, we also propose an approach based on GPT-4 to automatically identify neurons that imply arithmetic reasoning. Our analyses revealed that the activation of reasoning neurons in the feed-forward layers of an LLM can explain the importance of various components in a CoT prompt, and future research can extend it for a more complete understanding."
 }
 ```
 
